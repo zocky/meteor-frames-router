@@ -18,7 +18,7 @@ Package.onUse(function(api) {
   api.use('underscore','client');
   api.use('meteor','client');
   api.use('templating','client');
-  api.use('zocky:frames-context','client');
+  api.use('zocky:frames-context@0.0.1','client');
 
   api.addFiles('utils.js','client');
   api.addFiles('frames-route.js','client');
@@ -30,6 +30,6 @@ Package.onUse(function(api) {
 
 Package.onTest(function(api) {
   api.use('tinytest');
-  api.use('zocky:frames-context');
-  api.addFiles('frames-context-tests.js');
+  api.use('zocky:frames-router');
+  api.addFiles('frames-router-tests.js');
 });

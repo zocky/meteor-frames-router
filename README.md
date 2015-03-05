@@ -11,6 +11,8 @@ and associated with the path. If the same path is used again by other parts of y
 When a context is no longer required, i.e. when all instances of `{{>Frame}}` that use the context hae been destroyed), it will be destroyed. Its
 subscriptions will be stopped and its data will no longer will be available.
 
+## Installation
+`meteor add zocky:frames-router`
 
 ##API
 ### `FramesRouter.addRoutes(path,options)`
