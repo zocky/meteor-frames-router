@@ -16,23 +16,23 @@ subscriptions will be stopped and its data will no longer will be available.
 ## Installation
 `meteor add zocky:frames-router`
 
-##API
+## API
 ### `FramesRouter.addRoute(path,options)`
 Route paths can contain params, which are prefixed with `:` and available in your callbacks under `this.params`. The final parameter can end with `...`, meaning that it accepts slashes. 
 
 `options` is an object that can include: 
 
-#####`setup`
+- `setup`
 A function that will be run when all parent routes are loaded. `this` refers to the context. Useful functions at this point include:
 * `this.subscribe( name, args... )` - A wrapper for `Meteor.subscribe` which will ensure that the router will wait for the subscription, and that the subscription is stopped when it's no longer required.
 * `this.wait()` - Call this before an async task that the router should wait for.
 * `this.done()` - Call this when your async task is done. 
 
-##### `data`
+- `data`
 An object of values or functions that will be included in your context. If functions use any reactive data, they will be reactive.
 Parent data will be inherited by descendants, and can be used for calculating data in the descendants.
 
-##### `template`
+- `template`
 The name of the template that will display your data.  
 
 ### `FramesRouter.addRoutes(routeMap)`
