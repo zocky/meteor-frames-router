@@ -1,3 +1,5 @@
+EXPERIMENTAL and not production ready. You have been warned.
+
 # FramesRouter - Routable subpages for Meteor
 
 With FramesRouter, you can define routes and show them in templates with `{{>Frame path="/your/path"}}`.
@@ -35,7 +37,8 @@ The name of the template that will display your data.
 ### `FramesRouter.addRoutes(routeMap)`
 Calls `FramesRouter.addRoute` for each route in the map, with keys used as `path` and values as `options`.
 
-
+### `{{>Frame path="/your/path"}}`
+Include your routes in templates.
 
 ## Example
 In javascript on client:
