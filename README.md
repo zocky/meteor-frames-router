@@ -15,7 +15,7 @@ subscriptions will be stopped and its data will no longer will be available.
 `meteor add zocky:frames-router`
 
 ##API
-### `FramesRouter.addRoutes(path,options)`
+### `FramesRouter.addRoute(path,options)`
 Route paths can contain params, which are prefixed with `:` and available in your callbacks under `this.params`. The final parameter can end with `...`, meaning that it accepts slashes.
 
 #### Options
@@ -31,6 +31,11 @@ Parent data will be inherited by descendants, and can be used for calculating da
 
 #####`template`
 The name of the template that will display your data.  
+
+### `FramesRouter.addRoutes(routeMap)`
+Calls `FramesRouter.addRoute` for each route in the map, with keys used as `path` and values as `options`.
+
+
 
 ## Example
 In javascript on client:
